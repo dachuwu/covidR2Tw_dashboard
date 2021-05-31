@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taiwan COVID round 2 | Dashboard</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap 
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">-->
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.css">
+  <!-- overlayScrollbars 
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">-->
+  <!-- Daterange picker 
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">-->
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+
+
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+    <!-- DataTables 
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">-->
+  
+</head>
+
+
+<body class="sidebar-mini sidebar-collapse">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    
+    <ul class="navbar-nav">
+      
+	<!--  Left navbar links  -->
+     <li class="nav-item">
+       <a class="nav-link" id="button_sidebar" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+     </li>
+
+	 <li class="nav-item">
+        <a class="nav-link" href="#" role="button">Taiwan COVID Dashboard </a>
+      </li>
+      <!--
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>-->
+
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+
+
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-2" style="opacity: .8">
+      <span class="brand-text font-weight-light"> COVID </span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) 
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Alexander Pierce</a>
+        </div>
+      </div>-->
+
+
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Dashboard 1</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Coming soon.</p>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+          
+
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Analysis
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Coming soon.</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+
+
+          <li class="nav-header">    </li>
+          
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Team
+              </p>
+            </a>
+          </li>
+          
+        
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-9">
+            <!--<h1 class="m-0">Dashboard</h1> -->
+          </div><!-- /.col -->
+          <div class="col-sm-3">
+          	<span class="breadcrumb-item float-right" style="color: #961d1d; font-size:80%;">Updated <a id = "update">??</a></span>
+          	<!--
+            <ol class="breadcrumb float-sm-right">
+              
+              <li class="breadcrumb-item active">Dashboard v1</li>
+            </ol>-->
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-3 col-6">
+          	<div class="info-box" style="background-color: #ebecec;">
+              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-database"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Total Confirmed</span>
+                <span class="info-box-number"  id="infobox1">
+                  ???
+                  <small>cases</small>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <div class="info-box" style="background-color: #ebecec;">
+              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-exclamation-triangle"></i></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Daily Confirmd</span>
+                <span class="info-box-number"   id="infobox2">
+                  ???
+                  <small>cases</small>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <div class="info-box" style="background-color: #ebecec;">
+              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-cog"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Daily Tested</span>
+                <span class="info-box-number"   id="infobox3">
+                  ???
+                  <small>cases</small>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <div class="info-box" style="background-color: #ebecec;">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-feather"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Total Death</span>
+                <span class="info-box-number"  id="infobox4">
+                  ???
+                  <small>cases</small>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+          </div>
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+
+
+        <!-- Main 1st row -->
+        <div class="row">
+        <!-- Left col -->
+        <section class="col-12">
+            <!-- Custom tabs (Charts with tabs)-->
+            <div class="card"  id="card_epicurve" style="background-color: #ebecec;">
+              <div class="card-header py-1">
+                <h3 class="card-title  my-1">
+                  <i class="fas fa-chart-pie mr-1"></i> Epidemic Curves
+                </h3>
+                <div class="card-tools">
+                  <ul class="nav nav-pills ml-auto  my-1" >
+                  	<li class="nav-item" style="height: 20px;">
+                      <a class="nav-link py-0 active" href="#revenue-chart" data-toggle="tab" style=" ">By Onset</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link py-0" href="#sales-chart" data-toggle="tab" style=" ">By Confirmation</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link py-0" href="#info-chart"  title="Info" data-toggle="tab">
+                      	<i class="fas fa-info"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div><!-- /.card-header -->
+              <div class="card-body"   style="padding: 3px;">
+                <div class="tab-content p-0">
+                  <!-- Morris chart - Sales -->
+                  <div class="chart tab-pane active" id="revenue-chart" >
+                    
+                    <div id="epicurve" class ='need-reflow' ></div>
+                  </div>
+                  <div class="chart tab-pane" id="sales-chart" >
+                    <div id="epicurve_conf" class ='need-reflow' style="height: 100%;width:100%;"></div>
+                  </div>
+                  <div class="chart tab-pane" class ='need-reflow' id="info-chart" style="position: relative; height: 500px;">
+                    
+                  </div>
+                </div>
+              </div><!-- /.card-body -->
+            </div>
+        </section>
+
+
+
+
+
+        </div><!-- /.row (main 1st row) -->
+        <!-- Main 2nd row -->
+        <div class="row">
+        <!-- /.card -->
+	       <section class="col-12 col-lg-8">
+            <!-- solid sales graph -->
+	            <div class="card card-info direct-chat " style="height: 650px;width:100%">
+	              <div class="card-header py-1">
+	                <h3 class="card-title my-2"> <i class="fas fa-th mr-1"></i> County summary
+	                </h3>
+
+	                <div class="card-tools my-1">
+	                  <button type="button" class="btn bg-info btn-sm " data-widget="chat-pane-toggle"> <i class="fas fa-info"></i>
+	                  </button>
+	                </div>
+	              </div>
+	              <div class="card-body px-0 py-0" 	style="background-color: #ebecec;">
+
+	              	<div class="direct-chat-messages" id="pane-table" 
+	              	style="height: 100%; width:100%; background-color: #ebecec;font-size:75%; padding: 15px"></div>
+
+		            <div class="direct-chat-contacts" style="height: 100%; width:100%;"> </div>
+	         
+	              </div>
+	              <!-- /.card-body -->
+
+	              <!--<div class="card-footer " style="background-color: #ebecec;">
+	                
+	              </div> /.card-footer -->
+	            </div>
+            <!-- /.card -->
+			</section>
+
+			<section class="col-12 col-lg-4" >
+		        <!-- Map card -->
+		        <div class="card card-primary direct-chat " style="height: 650px; width:100%;">
+		          <div class="card-header py-1">
+		            <h3 class="card-title my-2 ">
+		              <i class="fas fa-map-marker-alt mr-1"></i>
+		              Maps
+		            </h3>
+		            <!-- card tools -->
+		            <div class="card-tools my-1">
+		              <button type="button" class="btn btn-tool bg-primary " data-widget="chat-pane-toggle"> <i class="fas fa-info"></i>
+		              </button>
+		            </div>
+		            <!-- /.card-tools -->
+		          </div>
+
+		          <div class="card-body" style="background-color: #ebecec;padding: 3px;">
+
+		          	<div class="direct-chat-messages" style="height: 100%; width:100%;">
+		          		<div id="casemap" class ='need-reflow' style="height: 100%; width:100%;"></div>
+		          	</div>
+
+		            <div class="direct-chat-contacts" style="height: 100%; width:100%;"> </div>
+		            
+		          </div>
+		          <!-- /.card-body-->
+		        </div>
+		        <!-- /.card -->
+			</section>
+
+
+		</div><!-- /.row (main 2nd row) -->
+
+        
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer py-1">
+    &copy; Ta-Chou Ng. Template from <a href="https://adminlte.io">AdminLTE.io</a>.
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 0.1.0
+    </div>
+  </footer>
+
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS <script src="plugins/chart.js/Chart.min.js"></script>-->
+
+<!--Sparkline  <script src="plugins/sparklines/sparkline.js"></script>-->
+
+<!-- JQVMap Knob Chart daterangepicker  Tempusdominus  Summernote overlayScrollbars
+
+
+-->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+
+<!-- Highcharts -->
+<script src="https://unpkg.com/topojson-client@3"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.5.0/proj4.js"></script>
+
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/maps/modules/map.js"></script>
+<script src="https://code.highcharts.com/maps/modules/data.js"></script>
+<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+<script src="https://code.highcharts.com/modules/annotations.js"></script>
+<script src="https://code.highcharts.com/stock/modules/drag-panes.js"></script>
+<!-- 
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>  -->
+
+<!-- DataTables  & Plugins -->
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="plugins/jszip/jszip.min.js"></script>
+<script src="plugins/pdfmake/pdfmake.min.js"></script>
+<script src="plugins/pdfmake/vfs_fonts.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+<!-- plots -->
+<script src="plots/Table_box.js"></script>
+<script src="plots/Plot_epicurve.js"></script>
+<script src="plots/Table_county.js"></script>
+<script src="plots/Map_county.js"></script>
+
+</body>
+</html>
