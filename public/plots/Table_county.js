@@ -1,4 +1,4 @@
-$.getJSON('https://raw.githubusercontent.com/dachuwu/TWCovid2/master/covidR2tw/output/db1_data_geo.json', function (dataraw) {
+$.getJSON('https://raw.githubusercontent.com/dachuwu/covidR2tw_dashboard/main/data/db1_data_geo.json', function (dataraw) {
 
     // split the data set into ohlc and volume https://demo-live-data.highcharts.com/aapl-ohlcv.json
     var data = dataraw.value,

@@ -6,8 +6,8 @@ function getDateOfWeek(w, y) {
 }
 
 $.when(
-    $.getJSON('https://raw.githubusercontent.com/dachuwu/TWCovid2/master/covidR2tw/output/db1_data.json'),
-    $.getJSON('https://raw.githubusercontent.com/dachuwu/TWCovid2/master/covidR2tw/output/test_year_week.json')
+    $.getJSON('https://raw.githubusercontent.com/dachuwu/covidR2tw_dashboard/main/data/db1_data.json'),
+    $.getJSON('https://covid19dashboard.cdc.gov.tw/dash4_year_week')
     ).then(function(dataraw, dataraw2) {
     // split the data set into ohlc and volume https://demo-live-data.highcharts.com/aapl-ohlcv.json
     var data = dataraw[0].value,

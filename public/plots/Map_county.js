@@ -43,7 +43,7 @@ $.getJSON(
 
 
 
-    $.getJSON('https://raw.githubusercontent.com/dachuwu/TWCovid2/master/covidR2tw/output/db1_data_geo.json', function (dataraw) {
+    $.getJSON('https://raw.githubusercontent.com/dachuwu/covidR2tw_dashboard/main/data/db1_data_geo.json', function (dataraw) {
 
         // content data
         var data = dataraw.value,
