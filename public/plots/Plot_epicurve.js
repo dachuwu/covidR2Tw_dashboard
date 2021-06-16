@@ -213,6 +213,16 @@ $.when(
             },
             text: 'Level 2 alert',
             x: -10
+          },{
+          	point: {
+                xAxis: 0,
+                yAxis: 0,
+                align: 'right',
+                x: Date.UTC(2021, 5-1, 15, 12),
+                y: case_total[490][1],
+            },
+            text: 'Level 3 alert',
+            x: -10
           }]          
         }], 
 
